@@ -1,7 +1,7 @@
 import httpx
 
-dokicloud = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/dokicloud", headers={"Authorization": f"Bearer {key}"}).json()
-rabbitstream = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/rabbitstream", headers={"Authorization": f"Bearer {key}"}).json()
+dokicloud = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/dokicloud").json()
+rabbitstream = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/rabbitstream").json()
 dokidate = dokicloud["commit"]["author"]["date"]
 rabbitdate = rabbitstream["commit"]["author"]["date"]
 if dokidate > rabbitdate:

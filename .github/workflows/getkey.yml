@@ -17,9 +17,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install httpx
+        pip install httpx click
     - name: Run Code
-      run: python3 .github/main.py
+      run: python3 .github/main.py --key ${{ secrets.KEY }}
     - name: Commit
       uses: EndBug/add-and-commit@v9
       with:

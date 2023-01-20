@@ -24,6 +24,6 @@ jobs:
       uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
-        add: "key.txt"
+        add: "key.txt --force"
         message: "Goofy Ahhhh"
-
+        tag_push: '--force'

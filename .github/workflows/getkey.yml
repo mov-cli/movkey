@@ -1,0 +1,29 @@
+name: Get Key
+
+on: 
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install httpx click
+    - name: Run Code
+      run: python3 .github/main.py --key ${{ secrets.KEY }}
+    - name: Commit
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        add: "key.txt"
+        message: "Goofy Ahhhh"
+

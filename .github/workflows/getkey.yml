@@ -3,7 +3,7 @@ name: Get Key
 on:
   workflow_dispatch:
   schedule:
-  - cron: '*/7 * * * *'
+  - cron: '*/10 * * * *'
 
 jobs:
   deploy:

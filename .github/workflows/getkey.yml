@@ -6,7 +6,7 @@ on:
   - cron: '*/10 * * * *'
 
 jobs:
-  deploy:
+  Get-Key:
     runs-on: ubuntu-latest
 
     steps:

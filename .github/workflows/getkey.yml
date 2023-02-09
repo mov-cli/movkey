@@ -26,5 +26,5 @@ jobs:
       with:
         default_author: github_actions
         add: "key.txt --force"
-        message: "$(curl -s whatthecommit.com/index.txt)"
+        message: "https://www.youtube.com/watch?v=xvFZjo5PgG0"
         tag_push: '--force'

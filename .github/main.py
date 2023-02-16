@@ -7,7 +7,7 @@ import click
 def key(key):
     dokicloud = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/dokicloud", headers={"Authorization": f"Bearer {key}"}).json()
     rabbitstream = httpx.get("https://api.github.com/repos/consumet/rapidclown/commits/rabbitstream", headers={"Authorization": f"Bearer {key}"}).json()
-    enimax = httpx.get("https://raw.githubusercontent.com/enimax-anime/key/e4/key.txt", headers={"Authorization": f"Bearer {key}"}).json()
+    enimax = httpx.get("ttps://api.github.com/repos/enimax-anime/key/commits/e4", headers={"Authorization": f"Bearer {key}"}).json()
     dokidate = dokicloud["commit"]["author"]["date"]
     rabbitdate = rabbitstream["commit"]["author"]["date"]
     enidate = enimax["commit"]["author"]["date"]

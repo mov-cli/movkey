@@ -2,6 +2,8 @@ name: Get Key
 
 on:
   workflow_dispatch:
+  schedule:
+  - cron: '*/10 * * * *'
 
 jobs:
   Get-Key:
